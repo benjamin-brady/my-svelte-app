@@ -1,4 +1,9 @@
-import { ita, por, pol, rus, jpn, heb, slk, slv, ara, tur, kor } from 'stopword';
+// These import styles work in `vite dev` and `vite build && vite preview` but are broken when running the bundle under a node docker image
+//import { ita, por, pol, rus, jpn, heb, slk, slv, ara, tur, kor } from 'stopword';
+//import { ita, por, pol, rus, jpn, heb, slk, slv, ara, tur, kor } from 'stopword/dist/stopword.esm.mjs';
+
+// Works with vite build but it's much uglier
+import { ita, por, pol, rus, jpn, heb, slk, slv, ara, tur, kor }  from '../node_modules/stopword/dist/stopword.esm.mjs'; 
 
 export enum LanguageCode {
     English = 'en',
